@@ -14,19 +14,7 @@ struct node{
 
 struct node *ROOT = NULL;
 
-void makeRoot(int value){
-
-    struct node *newNode = (struct node *)malloc(sizeof(struct node));
-    newNode->value = value;
-    if(ROOT == NULL){
-        ROOT = newNode;
-        newNode->left = NULL;
-        newNode->right = NULL;    
-    }
-}
-
-void makeNode(int value, struct node *parentNode){
-
+void addNode(int value, struct node *parentNode){
     struct node *newNode = (struct node *)malloc(sizeof(struct node));
     newNode->value = value;
     newNode->right = NULL;
@@ -34,6 +22,13 @@ void makeNode(int value, struct node *parentNode){
     if(parentNode == NULL){
         parentNode = newNode;
     }
+
+}
+
+
+void printMenu(){
+
+    printf("\n")
 
 }
 
